@@ -1,0 +1,16 @@
+<ion-view view-title="NewRoutine">
+  <ion-content>
+    <form ng-submit="createRoutine(name)" class="list">
+      <label class="item item-input">
+        <input ng-model="name" type="test" placeholder="Routine Name">
+      </label>
+    
+
+      <button type="submit" class="button button-full button-positive">Create</button>
+    </form>
+<!--       <button class="button button-full button-positive" ng-click="newExercise()">
+        Add an Exercise
+      </button> -->
+    <button class="btn btn-primary btn-lg" ng-click='signOut()'>Sign out</button>  
+  </ion-content>
+</ion-view>

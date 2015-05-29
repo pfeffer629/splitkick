@@ -1,0 +1,18 @@
+<ion-view view-title="{{routine.name}}">
+  <ion-nav-buttons side="right">
+    <button class="button" ng-click="addExercise()">
+      Add Exercise
+    </button>
+  </ion-nav-buttons>
+  <ion-content class="padding">    
+    <h2>{{routine.name}}</h2>
+    <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="exercise in routine.exercises" type="item-text-wrap">
+      {{exercise.exercise}}
+      {{exercise.reps}}
+      {{exercise.weight}}
+    </ion-item>
+    <button class="button button-full button-positive" ng-click="newExercise()">
+      Add an Exercise
+    </button>
+  </ion-content>
+</ion-view>

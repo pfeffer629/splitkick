@@ -1,0 +1,41 @@
+<ion-view view-title="Add Exercise">
+  <ion-content>
+    <form ng-submit="addExercise(selectedExercise, selectedReps, selectedWeight)" class="list">
+    <label class="item item-input item-select">
+      <div class="input-label">
+        Group
+      </div>
+      <select ng-model="selectedGroup" ng-options="group for group in groupReference">
+      <option value=""></option>
+      </select>
+    </label>
+    <label class="item item-input item-select">
+      <div class="input-label">
+        Muscle
+      </div>
+      <select ng-model="selectedMuscle" ng-options="muscle.muscle for muscle in muscleReference | filter:selectedGroup">
+      <option value=""></option>
+      </select>
+    </label>
+    <label class="item item-input item-select">
+      <div class="input-label">
+        Exercise
+      </div>
+      <select ng-model="selectedExercise" ng-options="exercise.exercise for exercise in exerciseReference | filter:selectedGroup | filter:selectedMuscle">
+      <option value=""></option>
+      </select>
+    </label>
+    <label class="item item-input">
+      <span class="input-label">Reps</span>
+      <input type="number" ng-model="selectedReps">
+    </label>
+    <label class="item item-input">
+      <span class="input-label">Weight</span>
+      <input type="number" ng-model="selectedWeight">
+    </label>
+    <button class="button button-full button-positive">
+        Add Exercise
+    </button>
+    </form>
+  </ion-content>
+</ion-view>
